@@ -2,7 +2,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "../ConvexClientProvider";
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "@/components/(main)/NavBar";
+import NavBar from "../components/(main)/NavBar";
+import { ThemeProvider } from "../components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Discord Clone",
@@ -16,14 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-white">
-        <ClerkProvider>
-          <ConvexClientProvider>
-            
-            <NavBar />
-            <main>{children}</main>
-          </ConvexClientProvider>
-        </ClerkProvider>
+      <body className="bg-background text-foreground">
+        <ThemeProvider>
+          <ClerkProvider>
+            <ConvexClientProvider>
+              <NavBar />
+              <main>{children}</main>
+            </ConvexClientProvider>
+          </ClerkProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
