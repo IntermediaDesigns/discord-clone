@@ -1,4 +1,4 @@
-import { SignInButton, SignUpButton } from "@clerk/nextjs";
+import { SignInButton, SignOutButton, SignUpButton } from "@clerk/nextjs";
 
 export default function NavBar() {
   return (
@@ -10,6 +10,7 @@ export default function NavBar() {
         <div className="space-x-4">
           <SignInButton />
           <SignUpButton />
+          <SignOutButton />
         </div>
       </div>
     </nav>
