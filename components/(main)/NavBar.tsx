@@ -7,6 +7,7 @@ import {
   SignUpButton,
 } from "@clerk/nextjs";
 import { Button } from "../ui/button";
+import { MoonIcon } from "lucide-react";
 
 export default function NavBar() {
   const { isSignedIn } = useUser();
@@ -17,7 +18,10 @@ export default function NavBar() {
         <div className="flex-start">
           <h1 className="text-2xl font-bold">Discord Clone</h1>
         </div>
-        <div className="space-x-4">
+        <div className="flex space-x-2 items-center">
+          <div className="border-gray-300 border rounded-md p-1 cursor-pointer hover:bg-black hover:text-white">
+            <MoonIcon className="w-4 h-4 " />
+          </div>
           {!isSignedIn && (
             <>
               <Button asChild variant="ghost">
