@@ -1,5 +1,14 @@
 import { v, GenericId } from "convex/values";
 import { mutation, query } from "./_generated/server";
+import { ConvexError } from "convex/values";
+
+const getUser = async (ctx: any) => {
+  const identity = await ctx.auth.getUserIdentity();
+  if (!identity) {
+    throw new ConvexError("You must be logged in to perform this action");
+  }
+  return identity;
+};
 
 export const create = mutation({
   args: {
@@ -8,6 +17,7 @@ export const create = mutation({
     profileId: v.string(),
   },
   handler: async (ctx, args) => {
+    const identity = await getUser(ctx);
     const server = await ctx.db.insert("servers", {
       name: args.name,
       profileId: args.profileId as GenericId<"profiles">,
@@ -44,6 +54,7 @@ export const update = mutation({
     imageUrl: v.string(),
   },
   handler: async (ctx, args) => {
+    const identity = await getUser(ctx);
     const server = await ctx.db
       .query("servers")
       .filter((q) => q.eq(q.field("_id"), args.id))
@@ -72,6 +83,7 @@ export const remove = mutation({
     id: v.string(),
   },
   handler: async (ctx, args) => {
+    const identity = await getUser(ctx);
     const server = await ctx.db
       .query("servers")
       .filter((q) => q.eq(q.field("_id"), args.id))
@@ -114,6 +126,7 @@ export const updateInviteCode = mutation({
     serverId: v.string(),
   },
   handler: async (ctx, args) => {
+    const identity = await getUser(ctx);
     const server = await ctx.db
       .query("servers")
       .filter((q) => q.eq(q.field("_id"), args.serverId))
@@ -142,6 +155,7 @@ export const updateMemberRole = mutation({
     role: v.string(),
   },
   handler: async (ctx, args) => {
+    const identity = await getUser(ctx);
     const member = await ctx.db
       .query("members")
       .filter((q) => q.eq(q.field("_id"), args.memberId))
@@ -168,6 +182,7 @@ export const removeMember = mutation({
     memberId: v.string(),
   },
   handler: async (ctx, args) => {
+    const identity = await getUser(ctx);
     const member = await ctx.db
       .query("members")
       .filter((q) => q.eq(q.field("_id"), args.memberId))
