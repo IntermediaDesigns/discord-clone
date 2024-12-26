@@ -1,6 +1,12 @@
-import { SignOutButton, useUser } from "@clerk/nextjs";
-import { Button } from "@/components/ui/button";
-import { SignInButton, SignUpButton } from "@clerk/clerk-react";
+"use client";
+
+import {
+  SignOutButton,
+  useUser,
+  SignInButton,
+  SignUpButton,
+} from "@clerk/nextjs";
+import { Button } from "../ui/button";
 
 export default function NavBar() {
   const { isSignedIn } = useUser();
@@ -14,15 +20,19 @@ export default function NavBar() {
         <div className="space-x-4">
           {!isSignedIn && (
             <>
-              <Button variant="ghost">
-                <SignInButton />
+              <Button asChild variant="ghost">
+                <SignInButton mode="modal">Sign In</SignInButton>
               </Button>
-              <Button variant="ghost">
-                <SignUpButton />
+              <Button asChild variant="ghost">
+                <SignUpButton mode="modal">Sign Up</SignUpButton>
               </Button>
             </>
           )}
-          {isSignedIn && <SignOutButton />}
+          {isSignedIn && (
+            <Button asChild variant="ghost">
+              <SignOutButton redirectUrl="/">Sign Out</SignOutButton>
+            </Button>
+          )}
         </div>
       </div>
     </nav>
