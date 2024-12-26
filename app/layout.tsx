@@ -1,13 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { ConvexClientProvider } from "./ConvexClientProvider";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "My App Title",
-  description: "My app description",
+  title: "Discord Clone",
+  description: "Discord clone with real-time chat and video functionality",
 };
 
 export default function RootLayout({
@@ -17,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <ConvexClientProvider>{children}</ConvexClientProvider>
       </body>
     </html>
