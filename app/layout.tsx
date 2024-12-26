@@ -1,6 +1,8 @@
 import { ClerkProvider } from "@clerk/nextjs";
+import { ConvexClientProvider } from "../ConvexClientProvider";
 import type { Metadata } from "next";
 import "./globals.css";
+import NavBar from "@/components/(main)/NavBar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +17,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>{children}</body>
+        <body>
+          <NavBar />
+          <ConvexClientProvider>{children}</ConvexClientProvider>
+        </body>
       </html>
     </ClerkProvider>
   );
