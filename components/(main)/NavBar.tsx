@@ -1,10 +1,10 @@
 "use client";
 
 import {
-  SignOutButton,
   useUser,
   SignInButton,
   SignUpButton,
+  UserButton,
 } from "@clerk/nextjs";
 import { Button } from "../ui/button";
 import { MoonIcon, SunIcon } from "lucide-react";
@@ -13,7 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function NavBar() {
-  const { isSignedIn } = useUser();
+  const { isSignedIn, user } = useUser();
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -56,13 +56,21 @@ export default function NavBar() {
             </>
           )}
           {isSignedIn && (
-            <Button
-              asChild
-              variant="ghost"
-              className="text-gray-700 hover:text-gray-900 hover:bg-gray-100 dark:text-[#B8A7D9] dark:hover:text-white dark:hover:bg-[#4B3480]"
-            >
-              <SignOutButton redirectUrl="/">Sign Out</SignOutButton>
-            </Button>
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <span className="text-sm font-medium text-gray-700 dark:text-[#B8A7D9]">
+                  {user?.username|| user?.fullName}
+                </span>
+                <UserButton 
+                  afterSignOutUrl="/"
+                  appearance={{
+                    elements: {
+                      avatarBox: "w-8 h-8"
+                    }
+                  }}
+                />
+              </div>
+            </div>
           )}
         </div>
       </div>
