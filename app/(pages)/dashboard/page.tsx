@@ -20,24 +20,24 @@ const DiscordClone = () => {
     <div className="h-screen w-full flex">
       {/* Servers Sidebar */}
       <div className="w-16 bg-[#f2f3f5] dark:bg-[#1A0B2E] flex flex-col items-center py-3 space-y-4">
-        <div className="w-12 h-12 bg-white  dark:bg-[#2D1B4E] hover:bg-[#5865f2] dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center text-[#313338] dark:text-white transition-colors">
-          <HamburgerMenu className="text-[#2D1B4E]" />
+        <div className="w-12 h-12 bg-white  dark:bg-[#2D1B4E] hover:bg-[#4B3480] hover:text-white dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center text-[#313338] dark:text-white transition-colors">
+          <HamburgerMenu />
         </div>
         <div className="border-b-[#b8a7d980] border-b-2 border w-full"></div>
         {/* Home Button */}
-        <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#5865f2] dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center text-[#313338] dark:text-white transition-colors">
+        <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center text-[#313338] dark:text-white transition-colors">
           DC
         </div>
 
         {/* Server List */}
         <div className="space-y-3">
-          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#5865f2] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white transition-colors">
+          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white transition-colors">
             S1
           </div>
-          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#5865f2] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white transition-colors">
+          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white transition-colors">
             S2
           </div>
-          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#5865f2] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white cursor-pointer transition-colors">
+          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white cursor-pointer transition-colors">
             <Plus size={24} />
           </div>
         </div>

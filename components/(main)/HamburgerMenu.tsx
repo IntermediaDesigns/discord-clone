@@ -16,7 +16,7 @@ const HamburgerMenu = ({ className }: HamburgerMenuProps) => {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         variant="ghost"
-        className="p-2 hover:bg-[#5865f2] dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center text-[#313338] dark:text-white transition-colors"
+        className="p-2 hover:bg-[#4B3480] hover:text-white dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center  dark:text-white transition-colors"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </Button>
@@ -28,13 +28,13 @@ const HamburgerMenu = ({ className }: HamburgerMenuProps) => {
             Menu
           </div>
           <div className="px-2 py-1">
-            <button className="w-full text-left px-2 py-2 text-[#6a6f77] dark:text-[#B8A7D9] hover:bg-[#e3e5e8] dark:hover:bg-[#4B3480] rounded transition-colors">
+            <button className="w-full text-left px-2 py-2 text-[#6a6f77] dark:text-[#1A0B2E] hover:bg-[#B8A7D9]  hover:text-[#1A0B2E] dark:hover:bg-[#4B3480] rounded transition-colors">
               Server Settings
             </button>
-            <button className="w-full text-left px-2 py-2 text-[#6a6f77] dark:text-[#B8A7D9] hover:bg-[#e3e5e8] dark:hover:bg-[#4B3480] rounded transition-colors">
+            <button className="w-full text-left px-2 py-2 text-[#6a6f77] dark:text-[#1A0B2E] hover:bg-[#B8A7D9] hover:text-[#1A0B2E] dark:hover:bg-[#4B3480] rounded transition-colors">
               Create Server
             </button>
-            <button className="w-full text-left px-2 py-2 text-[#6a6f77] dark:text-[#B8A7D9] hover:bg-[#e3e5e8] dark:hover:bg-[#4B3480] rounded transition-colors">
+            <button className="w-full text-left px-2 py-2 text-[#6a6f77] dark:text-[#1A0B2E] hover:bg-[#B8A7D9] hover:text-[#1A0B2E] dark:hover:bg-[#4B3480] rounded transition-colors">
               Join Server
             </button>
           </div>
