@@ -37,7 +37,7 @@ const DiscordClone = () => {
           <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white transition-colors cursor-pointer">
             S2
           </div>
-          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white cursor-pointer transition-colors cursor-pointer">
+          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white cursor-pointer transition-colors">
             <Plus size={24} />
           </div>
         </div>
