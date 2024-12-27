@@ -17,12 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-background text-foreground">
+      <body className="bg-background text-foreground overflow-hidden">
         <ThemeProvider>
           <ClerkProvider>
             <ConvexClientProvider>
-              <NavBar />
-              <main>{children}</main>
+            <NavBar />
+              <main className="overflow-hidden">
+                
+                {children}
+              </main>
             </ConvexClientProvider>
           </ClerkProvider>
         </ThemeProvider>

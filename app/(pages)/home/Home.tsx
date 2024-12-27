@@ -1,18 +1,28 @@
 import { auth } from "@clerk/nextjs/server";
+import DiscordClone from "../dashboard/page";
+import Image from "next/image";
 
 export default async function Home() {
   const { userId } = await auth();
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div className="flex items-center justify-center w-full h-screen relative">
       {userId ? (
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold">Welcome to Discord Clone!</h1>
-          <p className="text-xl">You are signed in and ready to chat</p>
+        <div className="text-center w-full">
+          <DiscordClone />
         </div>
       ) : (
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold">Welcome Guest</h1>
-          <p className="text-xl">Please sign in to start chatting</p>
+        <div className="text-center relative w-full h-full">
+          <Image
+            src="/landingImg.jpg"
+            alt="Discord Logo"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="relative z-10 flex flex-col items-center justify-around h-full bg-black/30">
+            <h1 className="text-6xl font-bold text-white drop-shadow-lg">Welcome Guest</h1>
+            <p className="text-2xl text-white drop-shadow-lg mt-80 mb-40 leading-loose">Join our community and start chatting with other users! <br></br> Sign in to start chatting</p>
+          </div>
         </div>
       )}
     </div>
