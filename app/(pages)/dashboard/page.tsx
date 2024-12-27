@@ -20,24 +20,24 @@ const DiscordClone = () => {
     <div className="h-screen w-full flex">
       {/* Servers Sidebar */}
       <div className="w-16 bg-[#f2f3f5] dark:bg-[#1A0B2E] flex flex-col items-center py-3 space-y-4">
-        <div className="w-12 h-12 bg-white  dark:bg-[#2D1B4E] hover:bg-[#4B3480] hover:text-white dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center text-[#313338] dark:text-white transition-colors">
+        <div className="w-12 h-12 bg-white  dark:bg-[#2D1B4E] hover:bg-[#4B3480] hover:text-white dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center text-[#313338] dark:text-white transition-colors cursor-pointer">
           <HamburgerMenu />
         </div>
         <div className="border-b-[#b8a7d980] border-b-2 border w-full"></div>
         {/* Home Button */}
-        <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center text-[#313338] dark:text-white transition-colors">
+        <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-full flex items-center justify-center text-[#313338] dark:text-white transition-colors cursor-pointer">
           DC
         </div>
 
         {/* Server List */}
         <div className="space-y-3">
-          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white transition-colors">
+          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white transition-colors cursor-pointer">
             S1
           </div>
-          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white transition-colors">
+          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white transition-colors cursor-pointer">
             S2
           </div>
-          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white cursor-pointer transition-colors">
+          <div className="w-12 h-12 bg-white dark:bg-[#2D1B4E] hover:bg-[#9E7DFF] dark:hover:bg-[#7B4DFF] rounded-2xl flex items-center justify-center text-[#313338] dark:text-white cursor-pointer transition-colors cursor-pointer">
             <Plus size={24} />
           </div>
         </div>
@@ -144,11 +144,11 @@ const DiscordClone = () => {
 
         {/* Member List */}
         <div className="space-y-2">
-          <div className="flex items-center text-[#313338] dark:text-[#B8A7D9] hover:bg-[#e3e5e8] dark:hover:bg-[#4B3480] p-2 rounded">
+          <div className="flex items-center text-[#313338] dark:text-[#B8A7D9] hover:bg-[#e3e5e8] dark:hover:bg-[#4B3480] p-2 rounded cursor-pointer">
             <div className="w-8 h-8 bg-[#e3e5e8] dark:bg-[#392766] rounded-full mr-2"></div>
             <span>User1</span>
           </div>
-          <div className="flex items-center text-[#313338] dark:text-[#B8A7D9] hover:bg-[#e3e5e8] dark:hover:bg-[#4B3480] p-2 rounded">
+          <div className="flex items-center text-[#313338] dark:text-[#B8A7D9] hover:bg-[#e3e5e8] dark:hover:bg-[#4B3480] p-2 rounded cursor-pointer">
             <div className="w-8 h-8 bg-[#e3e5e8] dark:bg-[#392766] rounded-full mr-2"></div>
             <span>User2</span>
           </div>
